@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Shop Homepage - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <link rel="icon" href="img/Fevicon.png" type="image/png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/headerFooter.css">
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <section id="title">
+
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="index.html"><img class="d-inline-block align-top titleimage"
+            src="images/W2.png" alt="Image "></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link pestena" href="producto.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena" href="news.html">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena" href="quienessomos.html">Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena" href="contact.html">Contáctanos</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+    </div>
+  </section>
+  <!-- Page Content -->
+  <section class="">
+    <div class="">
+      <div class="row">
+        <div class="col-lg-7">
+        <img class="" src="https://source.unsplash.com/dah-jZWgzx8/800x600" alt="imagen producto">
+      </div>
+        <div class="prod-img-text feature-box col-lg-5">
+          <h2>Vende en cualquier lugar</h2>
+          <p>Una plataforma que te permite vender donde quiera que estén tus clientes, ya sea online, en persona o en cualquier punto intermedio.</p>
+        </div>
+      </div>
+      <div class=" row">
+          <div class="prod-img-text feature-box col-lg-5">
+              <h2>Contacto directo con vendedores</h2>
+              <p>Una plataforma que te permite buscar todo tipo de productos, desde alimentos hasta articulos de cuidado personal.</p>
+            
+          </div>
+        <div class="col-lg-7">
+        <img class="" src="https://source.unsplash.com/K1uLEiqTQEA/800x600" alt="imagen producto">
+        </div>
+        
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <div class="container-fluid">
+
+
+
+
+
+    <div id="app">
+      <div>
+        <!-- Search form -->
+        <div class="input-group">
+          <input  v-model='search' type="text" class="form-control form-control-lg form-control-borderless" placeholder="Busca productos" >
+          <div class="input-group-append">
+            <button class="btn btn-lg btn-success" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row" >
+          <div class="col-lg-4 col-md-6 mb-4" v-for='elem in filtered'>
+            <div class="card text-center card-product">
+              <div class="card-product__img"><img class="card-img img-list" :src="elem.imagen" alt="imagen productos">
+                <ul class="card-product__imgOverlay">
+                  <li><button><a href="single-product.html"><i class="fas fa-heart"></i></a></button></li>
+                  <li><button><a href="vendedor.html"><i class="fas fa-address-book"></i></a></button></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p></p>
+                <h4 class="card-product__title"><a href="single-product.html">{{elem.descripcion}}</a></h4>
+                <small>{{elem.tags}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+  <!-- Footer -->
+  <footer id="footer">
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fas fa-envelope"></i>
+
+    <p class="footerText">© Copyright 2019 proyectoDAW</p>
+
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="js/producto.js"></script>
+  <script src="js/productovue.js"></script>
+
+</body>
+
+</html>

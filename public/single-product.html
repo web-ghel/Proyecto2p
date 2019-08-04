@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>Producto</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	 crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	 crossorigin="anonymous">
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logo.png">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/headerFooter.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	 crossorigin="" />
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+	 crossorigin="">
+	</script>
+
+  <link href="css/introjs.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+	<section id="title">
+    <h6>Producto</h6>
+		<!-- Nav Bar -->
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg navbar-dark">
+
+				<a class="navbar-brand" href="index.html"><img src="images/W2.png" class="titleimage" alt="instance"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="producto.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="news.html">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="quienessomos.html">Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="contact.html">Contáctanos</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+
+    </div>
+  </section>
+
+
+  <!-- Content -->
+
+  <section id="new-content">
+      <div class="row">
+        <div class="col">
+        <div class="card mb-3">
+          <img data-intro="La imagen del producto/servicio" src="images/mueble.png" class="card-img-top" alt="instance">
+          <div data-intro="Se encuentra las caracterisitcas del producto/servicio" class="card-body">
+            <h1 class="card-title">Sofá</h1>
+            <h2 class="card-subtitle">Características</h2>
+            <ol>
+              <li class="character-product">Tamaño</li>
+              <li class="character-product">Color</li>
+              <li class="character-product">Tipo</li>
+              <li class="character-product">Proveniencia</li>
+              <li class="character-product">Beneficios</li>
+            </ol>
+          </div>
+        </div>
+
+        </div>
+        <div data-intro="Puede ver información de contacto del emprendedor que proporciona dicho producto/servicio." class="card col-lg-4">
+          <img src="images/seller-01.png" class="card-img-top" alt="seller">
+        <div class="card-body">
+          <h3 class="card-title">Juan Pérez</h3>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Vel facilisis volutpat est velit. Non pulvinar neque laoreet suspendisse interdum consectetur. Tortor posuere ac ut consequat semper viverra nam libero justo.</p>
+        </div>
+            <div data-intro="Puede enviar mensajes al emprendedor para saber más características acerca de su producto." class="form-label-group">
+              <textarea name="message" id="message" class="form-control" rows="9" cols="25" required autofocus placeholder="Mensaje"></textarea>
+              <label id="name"></label>
+              <div class="form-group">
+                <button data-intro="Al hacer clic el mensaje se envia al emprendedor hasta que lo lea." type="submit" class="btn btn-lg btn-primary btn-block btn-info text-uppercase font-weight-bold mb-2" id="btnContactUs">Enviar</button>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div data-intro="Puede ver la localización del lugar donde puede adquirir el servicio/producto." class="card-footer">
+          <div id="mapid"></div>
+          <script src="js/mapa.js"></script>
+      </div>
+
+      <div data-intro="Puede ver otros productos/servicios de la misma categoría que le pueden gustar." class="row">
+      <div class="card col-lg-4">
+        <img src="images/seller-01.png" class="card-img-top" alt="seller">
+        <div class="card-body">
+          <h5 class="card-title">Producto</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.</p>
+        </div>
+        <div class="card-footer">
+          <a href="single-new.html" class="btn btn-lg btn-primary btn-info text-uppercase font-weight-bold mb-2">Ver más</a>
+        </div>
+      </div>
+
+      <div class="card col-lg-4">
+        <img src="images/seller-02.png" class="card-img-top" alt="seller">
+        <div class="card-body">
+          <h5 class="card-title">Producto</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.</p>
+        </div>
+        <div class="card-footer">
+          <a href="single-new.html" class="btn btn-lg btn-primary btn-info text-uppercase font-weight-bold mb-2">Ver más</a>
+        </div>
+      </div>
+
+      <div class="card col-lg-4">
+        <img src="images/seller-03.png" class="card-img-top" alt="seller">
+        <div class="card-body">
+          <h5 class="card-title">Producto</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla phasellus f pretium vulputate.</p>
+        </div>
+        <div class="card-footer">
+          <a href="single-new.html" class="btn btn-lg btn-primary btn-info text-uppercase font-weight-bold mb-2">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer id="footer">
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fas fa-envelope"></i>
+
+    <p class="footerText">© Copyright 2019 proyectoDAW</p>
+
+  </footer>
+
+  <script src="js/intro.js"></script>
+  <script src="js/intropagenext.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Web GHEL</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/headerFooter.css">
+
+  <link href="css/introjs.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <section id="title">
+    <!-- Nav Bar -->
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg">
+        <a data-step="1" data-intro="Este es el logo y nombre de la página" class="navbar-brand" href="index.html"><img
+            src="images/W2.png" class="titleimage" alt="instance"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div data-intro="Aquí puede encontrar las distintas opciones que posee el sitio web"
+          class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a data-intro="Aquí podemos encontrar los distintos productos y/o servicios disponibles."
+                class="nav-link pestena" href="producto.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a data-intro="Dentro podemos observar las últimas noticias referentes a lo que ha pasado dentro de este sitio."
+                class="nav-link pestena" href="news.html">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a data-intro="Puede obtener información acerca de la página web y de los desarrolladores del sitio."
+                class="nav-link pestena" href="quienessomos.html">Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a data-intro="Permite encontrar una página donde tendrá un medio para comunicarse con los desarrolladores de la página, quienes atenderán cualquier queja o comentario emitido por usted."
+                class="nav-link pestena" href="contact.html">Contáctanos</a>
+            </li>
+          </ul>
+          <span>
+            <button data-intro="Permite ingresar a la cuenta" class="btn btn-outline-info btn-lg download-btn"
+              onclick="location.href='login.html'" type="button">Ingresar</button>
+          </span>
+        </div>
+      </nav>
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h1>Encuentra negocios diversos, innovadores.</h1>
+          <button
+            data-intro="Si no posee una cuenta y quiere registrarse para poder publicar sus productos. Presione este botón."
+            class="btn btn-dark btn-lg download-btn" onclick="location.href='register.html'" type="button"><i
+              class="fas fa-sign-in-alt"></i> Regístrate</button>
+          <button data-intro="Podrá ver los productos/servicios dentro de la página divididos por categorías."
+            class="btn btn-outline-info btn-lg download-btn" onclick="location.href='producto.html'" type="button"><i
+              class="fas fa-book-open"></i> Catálogo</button>
+          <button id="multip" class="btn btn-outline-info btn-lg download-btn" onclick="introJs().start();"
+            type="button"> Guía</button>
+        </div>
+        <div class="conten col-lg-6">
+          <img class="imaini one-third align-self-end order-md-last img-fluid" src="images/prueba2.svg "
+            alt="web-ecommerce" style="height: 451px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+    <div class="row">
+
+      <div class="feature-box col-lg-4">
+        <i class="fas fa-check-circle icon fa-4x"></i>
+        <h3>Incrementa tus ventas.</h3>
+        <p class="text-center">Publica nuevos productos </p>
+      </div>
+      <div class="feature-box col-lg-4 ">
+        <i class="fas fa-bullseye icon fa-4x"></i>
+        <h3>Variedad de negocios.</h3>
+        <p class="text-center">Como cliente puedes navegar por un catálogo completo </p>
+      </div>
+      <div class="feature-box col-lg-4 ">
+        <i class="fas fa-clock fa-4x icon "></i>
+        <h3>Disponible a toda hora.</h3>
+        <p class="text-center">Conéctate con tus vendedores favoritos </p>
+      </div>
+    </div>
+
+
+  </section>
+
+  <section id="pricing">
+    <h2>Conectamos a clientes y vendedores </h2>
+    <p>Una forma simple de buscar tus productos favoritos y una forma fácil de hacer conocer tu marca.</p>
+    <div class="row pricing-cards">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Clientes</h3>
+
+          </div>
+          <div class="card-body">
+            <h2>Gratis!</h2>
+            <p>Navega por nuestra tienda</p>
+            <p>Contacto directo con vendedores</p>
+            <p>Añade a tu lista de favoritos</p>
+            <button class="btn btn-lg btn-block btn-outline-dark" type="button">Registrate!</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Negocios</h3>
+
+          </div>
+          <div class="card-body">
+            <h2>Gratis!</h2>
+            <p>Publica tus productos</p>
+            <p>Registra tus ventas</p>
+            <p>Incrementa tus ventas</p>
+            <button class="btn btn-lg btn-block btn-dark" type="button">Regístrate!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Call to Action -->
+
+  <div id="cta">
+    <h3 class="cta-text">Navega y descubre nuevos negocios como cliente o registra tu marca y hazte conocer .</h3>
+    <button class="btn btn-dark btn-lg download-btn" type="button"><i class="fas fa-sign-in-alt"></i>
+      Regístrate</button>
+    <button class="btn btn-outline-light btn-lg download-btn" type="button"><i class="fas fa-book-open"></i>
+      Catálogo</button>
+
+  </div>
+  <!-- Footer -->
+
+  <footer data-intro="Puede seguirnos a las siguientes redes sociales" id="footer">
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fas fa-envelope"></i>
+
+    <p class="footerText">© Copyright 2019 proyectoDAW</p>
+
+  </footer>
+
+  <script src="js/intro.js"></script>
+  <script src="js/intropage.js"></script>
+</body>
+
+</html>

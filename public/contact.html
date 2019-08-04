@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Contáctanos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
+  </head>
+  <body>
+    <section id="title">
+    <!-- Nav Bar -->
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html"><img src="images/W2.png" class="titleimage" alt="instance"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="producto.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="news.html">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="quienessomos.html">Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="contact.html">Contáctanos</a>
+            </li>  
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <main>
+    <section class="jumbotron text-center contactus">
+      <div class="container">
+          <h1 id="titulo">Contáctanos</h1>
+      </div>
+    </section>
+    
+    <section id="informacion">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="box-simple">
+            <div class="icon-outlined">
+              <i class="fa fa-map-marker"></i>
+            </div>
+            <h4>Dirección</h4>
+            <p>Ecuador, Guayas <br>Guayaquil<br><strong>Campus Gustavo Galindo</strong></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box-simple">
+            <div class="icon-outlined">
+              <i class="fa fa-phone"></i>
+            </div>
+            <h4>Teléfonos</h4>
+            <p>Móvil<br>099999999<br><strong>+234567890</strong></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box-simple">
+            <div class="icon-outlined">
+              <i class="fa fa-envelope"></i>
+            </div>
+            <h4>Email</h4>
+            <p>Soporte electrónico <br><strong>webghel@outlook.es</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="row block-9">
+      <div class="row-des">
+        <div class="site-heading">
+            <p>Con la finalidad de que los usuarios tengan un servicio de calidad contamos con espacio para reclamos y sugerencias sobre nuestra página web. Solo necesitas llenar el siguiente <strong>formulario</strong></p>
+            <div class="border"></div>
+          </div>
+      </div>
+      <div class="col-md-6 pr-md-5">
+        <form action="#">
+          <div class="form-label-group">
+            <input type="text" class="form-control" id="name" placeholder="Nombre" required="required"  />
+            <label for="name">Nombre</label>
+          </div>
+          <div class="form-label-group">
+            <input type="text" class="form-control" id="lastname" placeholder="Apellido" required="required" />
+            <label for="lastname">Apellido</label>
+          </div>
+          <div class="form-label-group">
+            <input class="form-control" id="city" list="lista" placeholder="Ciudad" required="required" name= "city" />
+            <label for="city">Ciudad</label>
+            <datalist id="lista">
+              <option value="Guayaquil"></option>
+              <option value="Quito"></option>
+              <option value="Cuenca"></option>
+            </datalist>
+          </div>
+          <div class="form-label-group">
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email" required="required">
+            <label for="inputEmail">Email</label>
+          </div>
+          <div class="form-label-group">
+            <input type="date" id="fecha" class="form-control" required="required">
+            <label for="fecha">Fecha de nacimiento</label>
+          </div>
+          
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="form-label-group">
+          <textarea name="message" id="message" class="form-control" rows="9" cols="35" required autofocus placeholder="Mensaje"></textarea>
+          <label for="name"></label>
+          <div class="form-group ">
+            <button type="submit" class="btn btn-lg btn-primary btn-block btn-info text-uppercase font-weight-bold mb-2" id="btnContactUs">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+    
+    <!-- footer-->
+    <footer id="footer">
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fas fa-envelope"></i>
+
+      <p class="footerText">© Copyright 2019 proyectoDAW</p>
+
+    </footer>
+  </body>
+</html>

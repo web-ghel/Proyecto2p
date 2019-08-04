@@ -1,0 +1,260 @@
+
+h1{
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+h2{
+
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+h3{
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+p {
+  color: #048998;
+}
+li{
+  color: #264e70;
+}
+.container-fluid{
+  padding: 3% 10%;
+}
+
+.download-btn{
+  margin: 5% 3% 5% 0;
+}
+
+/* title image*/
+.titleimageIndex{
+  width: 75%;
+  position: relative;
+
+}
+
+/*-----------css3------------*/
+.conten:hover .imaini{
+  filter: saturate(120%);
+
+  -webkit-transform: rotate(-1deg);transform: rotate(-1deg);
+}
+.conten{
+  overflow:hidden;
+}
+
+/*feature section */
+#features{
+  padding: 7% 15%;
+  background-color: #fff;
+  position: relative;
+}
+.feature-box{
+  text-align: center;
+}
+.icon{
+  margin-bottom: 30px;
+  color: #3bb4c1;
+}
+.icon:hover{
+  color: #048998;
+}
+
+
+@media(max-width : 1028px){
+  .titleimage{
+    position: static;
+    transform: rotate(0);
+  }
+  #title{
+    text-align: center;
+  }
+}
+
+/* pricing-section */
+#pricing, #news{
+  padding: 100px;
+  text-align: center;
+}
+#cta{
+    background-color: #3bb4c1;
+    color: #fff;
+    text-align: center;
+    padding: 7% 15%;
+
+}
+.cta-text{
+  font-size: 3rem;
+}
+
+#informacion{
+    padding: 5% 8%;
+    background-color: #fff;
+    position: relative;
+    }
+
+.col-md-6 label, .col-md-4 label{
+  font-weight: bold;
+}
+
+
+/* news section*/
+ #new-content{
+  padding: 3% 15%;
+  background-color: #fff;
+  position: relative;
+ }
+#new-content img{
+  float: left;
+  height: 200px;
+  width: 300px;
+  padding-right: 2%;
+}
+
+.card-title{
+  font-weight: bold;
+}
+
+.card {
+  padding: 0
+}
+
+.row .btn-info {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  border-radius: 2rem;
+}
+
+.row p{
+  text-align: justify;
+}
+
+@media (max-width : 320){
+  #new-content .row img {
+    height: auto;
+  }
+
+  #new-content .row h1 {
+    font-size: 16vw;
+  }
+
+  #new-content .row p {
+    font-size: 11vw;
+  }
+}
+
+#news .card, #new-content .card{
+  border: 0;
+}
+
+#new-content .card-footer{
+  background-color: #fff;
+  border-top: 0;
+}
+#news{
+  padding: 0 12%;
+  text-align: center;
+}
+
+/* product cards */
+.card-product {
+  border: 0;
+  margin-bottom: 30px
+}
+
+.card-product p {
+  margin-bottom: 0
+}
+
+.card-product__img {
+  position: relative
+}
+
+.card-product__imgOverlay {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 5px;
+  transform: translateY(30px);
+  opacity: 0;
+  z-index: -1;
+  transition: all .48s ease
+}
+
+.card-product__imgOverlay li {
+  display: inline-block
+}
+
+.card-product__imgOverlay li button {
+  border: 0;
+  border-radius: 0;
+  padding: 7px 12px;
+  background: #b4e9e2
+}
+
+.card-product__imgOverlay li button i, .card-product__imgOverlay li button span {
+  font-size: 15px;
+  color: #fff;
+  vertical-align: middle
+}
+
+.card-product__imgOverlay li button:hover {
+  background: #2c858f
+}
+
+.card-product__imgOverlay li:not(:last-child) {
+  margin-right: 5px
+}
+
+.card-product__title a {
+  color: #222
+}
+
+.card-product__price {
+  font-size: 18px;
+  font-weight: 500
+}
+
+.card-product:hover .card-product__imgOverlay {
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0)
+}
+
+.card-product:hover .card-product__title a {
+  color: #384aeb
+}
+
+#mapid { height: 360px; }
+
+
+.img-product{
+  text-align: left;
+  background-color: #f6f5f5;
+
+
+}
+.img-product2{
+  text-align: right;
+  background-color: #f6f5f5;
+}
+.img-list{
+  width: 300px;
+  height: 400px;
+}
+.input-group{
+  padding-bottom: 10%;
+  padding-top: 5%
+}
+.prod-img-text{
+  padding: 15% 5%;
+
+}
+.img-product2{
+  height: 800px; 
+  width: 600px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
+  </head>
+  <body>
+    <div id="title">
+    <!-- Nav Bar -->
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html"><img class="titleimage" src="images/W2.png " alt="imagen login" ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="producto.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="news.html">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="quienessomos.html">Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pestena"  href="contact.html">Contáctanos</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+    <div class="container-fluid">
+      <div class="row no-gutter">
+        <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+        <div class="col-md-8 col-lg-6">
+          <div class="login d-flex align-items-center py-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-9 col-lg-8 mx-auto">
+                  <h3 class="login-heading mb-4">Ingresa a tu cuenta</h3>
+                  <form>
+                    <div class="form-label-group">
+                      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                      <label for="inputEmail">Dirección de correo</label>
+                    </div>
+
+                    <div class="form-label-group">
+                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                      <label for="inputPassword">Contraseña</label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                      <label class="custom-control-label" for="customCheck1">Recordar contraseña</label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block btn-info text-uppercase font-weight-bold mb-2" type="submit">Inicia sesión</button>
+
+                    <div class="text-center">
+                      <a class="small" href="#">¿Olvidaste tu contraseña?</a></div>
+                      <hr class="my-4">
+                      <p>o si no tienes una cuenta con nosotros</p>
+                      
+                        <button onclick="location.href='register.html'" type="button" class="btn btn-lg btn-primary btn-block btn-info text-uppercase font-weight-bold mb-2" >Registrate!</button>
+                     
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer-->
+    <footer id="footer">
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fas fa-envelope"></i>
+
+      <p class="footerText">© Copyright 2019 proyectoDAW</p>
+
+    </footer>
+
+
+
+
+  </body>
+</html>

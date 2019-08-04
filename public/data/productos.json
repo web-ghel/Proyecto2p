@@ -1,0 +1,25 @@
+{
+  "productos":[
+    {
+      "id": 1 ,
+      "nombre": "Negocio1",
+      "imagen": "/images/prod6.jpg",
+      "descripcion": "Miel de abejas",
+      "tags": "orgánico"
+    },
+    {
+      "id": 2,
+      "nombre": "Negocio2",
+      "imagen": "/images/prod2.jpg",
+      "descripcion": "Cafe Orgánico",
+      "tags": "orgánico"
+    },
+    {
+      "id": 3,
+      "nombre": "Negoci3",
+      "imagen": "/images/prod8.jpg",
+      "descripcion": "Crema de manos ",
+      "tags": "orgánico"
+    }
+  ]
+}

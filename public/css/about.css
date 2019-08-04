@@ -1,0 +1,138 @@
+
+h3{
+  font-weight: 500;
+}
+.nav-pills .nav-item .nav-link {
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 100px;
+    color: blue;
+    transition: all .3s;
+    border-radius: 30px;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 4px;
+
+}
+
+
+.nav-pills:not(.flex-column) .nav-item+.nav-item:not(:first-child) {
+    margin-left: 5px;
+}
+
+.nav-pills .nav-item .nav-link.active {
+    color: blue;
+    background-color: black;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
+}
+
+
+.nav-pills .nav-item .nav-link:not(.active):hover {
+    background-color: rgba(200,200,200,.2);
+}
+
+.nav-pills .nav-item i {
+    display: block;
+    font-size: 30px;
+    padding: 15px 0;
+}
+
+
+.nav-pills.flex-column .nav-item+.nav-item {
+    margin-top: 10px;
+}
+
+.tab-pane{
+    font-weight: 300;
+}
+.tab-space {
+    padding: 20px 0 50px;
+    font-weight: 300;
+}
+
+.nav-pills .nav-item .nav-link {
+    line-height: 24px;
+    min-width: 100px;
+    color: #555;
+    transition: all .3s;
+    border-radius: 2rem;
+    text-align: center;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+}
+
+
+.nav-pills:not(.flex-column) .nav-item+.nav-item:not(:first-child) {
+    margin-left: 8px;
+}
+
+.nav-pills .nav-item .nav-link.active {
+    color: #fff;
+    background-color: #048998;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
+}
+.team-content {
+    padding: 0px 15px 15px 15px;
+}
+.border-team {
+    border-bottom:1px solid #048998;
+    margin-bottom:10px;
+}
+/* Social Icons */
+
+.social-icons{  
+    margin: 0;
+    padding: 0;
+    font-size : 10px;
+}
+.social-icons a i {
+    margin:7px 7px 7px 0px;
+    color:#048998;
+    
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 #3bb4c1, 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.fa-facebook-square:hover {
+     color: #3B5998 !important;
+     transition:all .25s;
+ }
+ .fa-twitter-square:hover {
+     color: #4099FF;
+     transition:all .25s;
+ }
+.fa-envelope-square:hover {
+     color: #f39c12 !important;
+     transition:all .25s;
+ }
+.border {
+    background: #e1e1e1;
+    height: 1px;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+}
+
+.paddingTB60 {
+    padding-top:60px;
+    padding-bottom:60px;
+}
+
+.cta-padding35 {
+    padding: 35px 0 35px;
+    background-color: #b40028;
+    color:#fff;
+}
+.row{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
