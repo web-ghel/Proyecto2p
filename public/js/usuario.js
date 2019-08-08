@@ -7,7 +7,7 @@ const app = new Vue({
     created: function(){
         this.loadJson();
     },
-    computed :{
+    /*computed :{
         filtered: function(){
             return this.objeto.filter((prod)=> {
                 return prod.descripcion.match(this.search); 
@@ -15,7 +15,7 @@ const app = new Vue({
 
         }
 
-    },
+    },*/
     methods :{
         loadJson (){   
             var app = this
@@ -26,7 +26,7 @@ const app = new Vue({
                 var arr = response.data
                 //console.log(arr)
                 for (let index = 0; index < arr.length; index++) {
-                    Vue.set(app.objeto,index,{nombre: arr[index].nombre, imagen: "/images/prod8.jpg" , descripcion: arr[index].beneficio, tags: arr[index].tamano}   )
+                    Vue.set(app.objeto,index,{nombre: arr[index].nombre, precio: arr[index].precio , color: arr[index].color, tamano: arr[index].tamano , beneficio : arr[index].beneficio } )
                 }
             })
             .catch(function(error){

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Vendedor</title>
-
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -112,7 +112,57 @@
           </div>
         </div>
 
-        <div class="col-12"><h2>Mis productos<i class="fas fa-cog ml-2"></i></h2>
+        <div class="col-12"><h2>Mis productos <i class="fas fa-cog ml-2"></i></h2>
+          <div id="app">
+            <h3>Mi producto vue</h3>
+              <div class="row mb-3" v-for='elem in objeto'>
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>{{elem.nombre}}<i class="fas fa-pen ml-3"></i></h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <img class="rounded mx-auto" src="images/prod1.jpg" alt="producto1" width="100">
+                          </div>
+                          <div class="col-md-10">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <label>Precio: </label>
+                                <p>{{elem.precio}}</p>
+                              </div>
+                              <div class="col-md-4"> 
+                                <label>Categoria: </label>
+                                <p>Natural</p>
+                              </div>
+                              <div class="col-md-4"> 
+                                <label>Tamaño: </label>
+                                <p>{{elem.tamano}}</p>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <label>Color: </label>
+                                <p>{{elem.color}}</p>
+                              </div>
+                              <div class="col-md-4"> 
+                                <label>Proveniencia: </label>
+                                <p>China</p>
+                              </div>
+                              <div class="col-md-4"> 
+                                <label>Beneficios: </label>
+                                <p>{{elem.beneficio}}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+          </div>
 
           <div class="row mb-3">
             <div class="col-md-12">
@@ -272,8 +322,8 @@
     <p class="footerText">© Copyright 2019 proyectoDAW</p>
 
   </footer>
-
-
+  <script src="https://unpkg.com/vue"></script>
+  <script src="js/usuario.js"></script>
 </body>
 
 </html>
