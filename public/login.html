@@ -50,14 +50,14 @@
               <div class="row">
                 <div class="col-md-9 col-lg-8 mx-auto">
                   <h3 class="login-heading mb-4">Ingresa a tu cuenta</h3>
-                  <form>
+                  <form action="/login" method="POST"> 
                     <div class="form-label-group">
-                      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                      <input type="email" id="inputEmail" class="form-control" name="username" placeholder="Email address" required autofocus>
                       <label for="inputEmail">Dirección de correo</label>
                     </div>
 
                     <div class="form-label-group">
-                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
                       <label for="inputPassword">Contraseña</label>
                     </div>
 
