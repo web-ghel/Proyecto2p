@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/headerFooter.css">
+  
 </head>
 
 
@@ -69,51 +70,52 @@
       </div>
 
       <div class="col-lg-8">
-        <div class="col-12"><h2>Información personal <i class="fas fa-cog ml-2"></i></h2>
-          <div class="row">
-            <div class="col-md-6">
-              <label>Nombre Completo: </label>
-              <p>Juan Perez</p>
-            </div>
-            <div class="col-md-6">
-              <label>Tipo de Usuario: </label>
-              <p>Vendedor</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <label>Nombre de su Negocio: </label>
-              <p>Supermercado Don Perez</p>
-            </div>
-            <div class="col-md-6">
-              <label>Correo electronico: </label>
-              <p>juanperez@hotmail.com</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <label>Ubicación de su Negocio: </label>
-              <p>Sauce 8, Mz A39 Villa 25</p>
-            </div>
-            <div class="col-md-6">
-              <label>Ciudad en la que se encuentra: </label>
-              <p>Guayaquil</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <label>Teléfono convencional: </label>
-              <p>(04) 2 556688</p>
-            </div>
-            <div class="col-md-6">
-              <label>Whatsapp: </label>
-              <p>(+593) 99 222 3333</p>
-            </div>
-          </div>
-        </div>
+
 
         <div class="col-12"><h2>Mis productos <i class="fas fa-cog ml-2"></i></h2>
           <div id="app">
+              <div class="col-12"><h2>Información personal <i class="fas fa-cog ml-2"></i></h2>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Nombre Completo: </label>
+                    <p>{{objeto2[0].nombre}}</p>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Tipo de Usuario: </label>
+                    <p>Vendedor</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Nombre de su Negocio: </label>
+                    <p>Supermercado Don Perez</p>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Correo electronico: </label>
+                    <p>{{objeto2[0].mail}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Ubicación de su Negocio: </label>
+                    <p>{{objeto2[0].direccion}}</p>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Ciudad en la que se encuentra: </label>
+                    <p>Guayaquil</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Teléfono convencional: </label>
+                    <p>{{objeto2[0].telefono}}</p>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Whatsapp: </label>
+                    <p>(+593) 99 222 3333</p>
+                  </div>
+                </div>
+              </div>
             <h3>Mi producto vue</h3>
               <div class="row mb-3" v-for='elem in objeto'>
                   <div class="col-md-12">
@@ -164,146 +166,9 @@
 
           </div>
 
-          <div class="row mb-3">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Producto 1<i class="fas fa-pen ml-3"></i></h4>
-                </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <img class="rounded mx-auto" src="images/prod1.jpg" alt="producto1" width="100">
-                    </div>
-                    <div class="col-md-10">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <label>Precio: </label>
-                          <p>$ 120.00</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Categoria: </label>
-                          <p>Natural</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Tamaño: </label>
-                          <p>1.86x2.98 pulgadas</p>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <label>Color: </label>
-                          <p>Negro/Blanco</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Proveniencia: </label>
-                          <p>China</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Beneficios: </label>
-                          <p>Salud y Belleza</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+         
 
-          <div class="row mb-3">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Producto 2<i class="fas fa-pen ml-3"></i></h4>
-                </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <img class="rounded mx-auto" src="images/prod2.jpg" alt="producto2" width="100">
-                    </div>
-                    <div class="col-md-10">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <label>Precio: </label>
-                          <p>$ 150.00</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Categoria: </label>
-                          <p>Natural</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Tamaño: </label>
-                          <p>2.00 mm</p>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <label>Color: </label>
-                          <p>Cafe</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Proveniencia: </label>
-                          <p>India</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Beneficios: </label>
-                          <p>Descanzo y relajación</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Producto 3<i class="fas fa-pen ml-3"></i></h4>
-                </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <img class="rounded mx-auto" src="images/prod3.jpg" alt="producto3" width="100">
-                    </div>
-                    <div class="col-md-10">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <label>Precio: </label>
-                          <p>$ 90.00</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Categoria: </label>
-                          <p>Accesorio</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Tamaño: </label>
-                          <p>2.5 mm radio</p>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <label>Color: </label>
-                          <p>Plata</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Proveniencia: </label>
-                          <p>EE UU</p>
-                        </div>
-                        <div class="col-md-4"> 
-                          <label>Beneficios: </label>
-                          <p>Elegancia</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+ 
         
         </div>
       </div>
@@ -324,6 +189,7 @@
   </footer>
   <script src="https://unpkg.com/vue"></script>
   <script src="js/usuario.js"></script>
+  
 </body>
 
 </html>

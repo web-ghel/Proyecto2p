@@ -64,10 +64,12 @@ app.get('/api/producto', function(req, res){
 })
 
 app.get("/perfil", function(req,res){
+    console.log(req.user)
+   
     if(req.isAuthenticated()){
-        res.sendFile("producto.html")
+        res.sendFile(__dirname+"/public/vendedor.html")
     }else{
-        res.sendFile(__dirname + "/public/login.html")
+        res.send("error")
     }
 })
 
@@ -97,16 +99,20 @@ app.post('/login', function(req, res){
         }else{
             console.log(user)
             passport.authenticate("local")(req,res,function(){
-                res.redirect("/products")
+                res.redirect("/perfil")
                 console.log("autenticado")
             })
         }
     })
 })
 
-app.get('/products' , function(req,res){
-    res.send(req.username)
-    console.log(req.user.username)
+app.get('/loginperfil' , function(req,res){
+    console.log(req.user)
+    Usuario.findOne({
+        where:{mail:req.user.username}
+    }).then(user =>{
+       res.send(JSON.stringify(user))
+    })
 })
 
 app.listen(3000, function(){
