@@ -91,7 +91,7 @@ app.post('/login', function(req, res){
 
     const user = new User({
         username: req.body.username,
-        password: req.body.passport,
+        password: req.body.password,
     })
     req.login(user, function(err){
         if(err){
@@ -115,6 +115,29 @@ app.get('/loginperfil' , function(req,res){
     })
 })
 
+
+app.post('/user/crud', function(req, res){
+    Producto.create(req.body).then(function(prod){
+        if(prod){
+            console.log("Producto ingresado")
+        }
+    })
+    console.log(req.body)
+})
+
+app.delete('/user/crud/:id', function(req, res){
+    Producto.findByPk(req.params.id).then((prod) =>{
+        if(prod){
+            return prod.destroy()
+            
+        }else{
+            res.send("no se destruyo")
+        }
+    })
+    
+})
+
+
 app.listen(3000, function(){
-    console.log("server listening ")
+    console.log("server listening")
 })
