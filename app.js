@@ -58,9 +58,17 @@ app.get('/api/usuario', function(req, res){
     })    
 })
 app.get('/api/producto', function(req, res){
-    Producto.findAll().then(products => {
-        res.send( JSON.stringify(products, null, 4))
-    })    
+    console.log(req.user.username) 
+    Usuario.findOne({
+        where:{mail:req.user.username}
+    }).then(user =>{
+        Producto.findAll({where :{vendedor : user.idUser}}).then(products => {
+            res.send( JSON.stringify(products, null, 4))
+        })   
+       
+    })
+
+ 
 })
 
 app.get("/perfil", function(req,res){
