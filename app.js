@@ -137,6 +137,12 @@ app.delete('/user/crud/:id', function(req, res){
     
 })
 
+app.put('/user/crud/:id', function(req, res){
+    Producto.update(req.body, {where: {idProduc: req.params.id}}).then((result) =>{
+        console.log(result)
+    })
+})
+
 
 app.listen(3000, function(){
     console.log("server listening")

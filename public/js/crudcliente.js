@@ -2,8 +2,11 @@ const app = new Vue({
     el: '#app',
     data: {
         id: "",
+        id2:"",
         objeto : [],
         nuevoProd:{nombre: "", precio: "" ,tamano:"", color:""
+        },
+        actProd:{nombre: "", precio: "" ,tamano:"", color:""
         } 
     },
     created: function(){
@@ -58,6 +61,15 @@ const app = new Vue({
                 console.log(this.response);
             })
             console.log("removiendo prod " + this.id)
+        },
+        actualizarProd(){
+            var postStr = 'nombre='+app.actProd.nombre+"&precio="+app.actProd.precio+"&tamano="+app.actProd.tamano+"&color="+app.actProd.color
+            axios.put('http://localhost:3000/user/crud/' + this.id2, postStr,{
+                headers:{
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+                }
+            })
+            console.log("actualizando prod " + this.id2,)
         }
             
     }
