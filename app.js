@@ -5,7 +5,8 @@ const mongoose = require("mongoose")
 const session = require('express-session')
 const passport = require('passport')
 const passportLocalMongoose = require('passport-local-mongoose')
-
+const nodemailer = require("nodemailer");
+const xoauth2 = require('xoauth2');
 
 
 
@@ -21,7 +22,7 @@ app.use(function(req, res, next) {
   });
 
 
-  
+
 app.use(session({
     secret: "a secret secret",
     resave: false,
@@ -31,17 +32,17 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-// mongoose connect and schema  
+// mongoose connect and schema
 mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser : true})
 const userSchema = new mongoose.Schema({
-    username: String, 
+    username: String,
     password: String
 })
 const productSchema = new mongoose.Schema({
     nombre : String,
     precio : String,
-    color: String, 
-    tamano : String, 
+    color: String,
+    tamano : String,
     beneficio: String,
     vendedor: String,
     fecha: String
@@ -65,25 +66,25 @@ app.get('/', function(req, res){
 app.get('/api/usuario', function(req, res){
     Usuario.findAll().then(users => {
         res.send( JSON.stringify(users, null, 4))
-    })    
+    })
 })
 app.get('/api/producto', function(req, res){
-    console.log(req.user.username) 
+    console.log(req.user.username)
     Usuario.findOne({
         where:{mail:req.user.username}
     }).then(user =>{
         Producto.findAll({where :{vendedor : user.idUser}}).then(products => {
             res.send( JSON.stringify(products, null, 4))
-        })   
-       
+        })
+
     })
 
- 
+
 })
 
 app.get("/perfil", function(req,res){
     console.log(req.user)
-   
+
     if(req.isAuthenticated()){
         res.sendFile(__dirname+"/public/vendedor.html")
     }else{
@@ -153,12 +154,12 @@ app.delete('/user/crud/:id', function(req, res){
     Producto.findByPk(req.params.id).then((prod) =>{
         if(prod){
             return prod.destroy()
-            
+
         }else{
             res.send("no se destruyo")
         }
     })
-    
+
 })
 
 app.put('/user/crud/:id', function(req, res){
@@ -170,9 +171,38 @@ app.put('/user/crud/:id', function(req, res){
 app.get('/api/producto/all', function(req,res){
     ProdMongo.find().then(products => {
         res.send( JSON.stringify(products, null, 4))
-    })   
+    })
 })
 
+//Email
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+const smtpTransport = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // use SSL
+    auth: {
+        user: 'webgheldaw2019@gmail.com',
+        pass: 'proyecto2019'
+    }
+});
+
+app.get('/contact.html/send',function(req,res){
+  const mailOptions={
+     to : req.query.to,
+     subject : req.query.subject,
+     text : req.query.text
+  }
+  console.log(mailOptions);
+  smtpTransport.sendMail(mailOptions, function(error, response){
+  if(error){
+  console.log(error);
+  res.end("error");
+  }else{
+  console.log("Message sent: " + response.mensaje);
+  res.end("sent");
+  }
+  });
+});
 
 app.listen(3000, function(){
     console.log("server listening")
