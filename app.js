@@ -37,6 +37,16 @@ const userSchema = new mongoose.Schema({
     username: String, 
     password: String
 })
+const productSchema = new mongoose.Schema({
+    nombre : String,
+    precio : String,
+    color: String, 
+    tamano : String, 
+    beneficio: String,
+    vendedor: String,
+    fecha: String
+})
+const ProdMongo = new mongoose.model("Product", productSchema)
 
 userSchema.plugin(passportLocalMongoose)
 
@@ -77,8 +87,14 @@ app.get("/perfil", function(req,res){
     if(req.isAuthenticated()){
         res.sendFile(__dirname+"/public/vendedor.html")
     }else{
-        res.send("error")
+        res.sendFile(__dirname+"/public/login.html")
     }
+})
+
+app.get('/logout', function(req,res){
+    req.logout()
+    res.redirect('/')
+
 })
 
 
@@ -149,6 +165,12 @@ app.put('/user/crud/:id', function(req, res){
     Producto.update(req.body, {where: {idProduc: req.params.id}}).then((result) =>{
         console.log(result)
     })
+})
+
+app.get('/api/producto/all', function(req,res){
+    ProdMongo.find().then(products => {
+        res.send( JSON.stringify(products, null, 4))
+    })   
 })
 
 

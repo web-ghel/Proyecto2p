@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Productos</title>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/reporte.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+	<div id="app">
+            <div class="container">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Reporte de <b>Productos</b></h2>
+                                </div>
+                                <div class="col-sm-6">
+                                        <input  v-model='search' type="text" class="form-control form-control-lg form-control-borderless" placeholder="Buscar Color" >
+                                </div>
+                            </div>
+                        </div>
+        
+                        <table is="custom-table" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Nombre
+                                    </th>
+                                    <th>Precio</th>
+                                    <th>Color</th>
+                                    <th>Tamaño</th>
+                                    <th>Beneficio</th>
+                                    <th>Vendedor</th>
+                                    <th>Fecha</th>
+                                </tr>
+                            </thead>
+        
+        
+                            <tbody>
+                                <div>
+                                    <tr v-for='elem in filtered' :key="elem.nombre">
+                                        <td>
+                                                {{elem.nombre}}
+                                        </td>
+                                        <td>{{elem.precio}}</td>
+                                        <td>{{elem.color}}</td>
+                                        <td>{{elem.tamano}}</td>
+                                        <td>{{elem.beneficio}}</td>
+                                        <td>{{elem.vendedor}}   </td>
+                                        <td>{{elem.fecha}}   </td>
+                                    </tr>
+                                </div>
+                            </tbody>
+        
+                        </table>
+        
+                    </div>
+                </div>
+
+
+	<script src="https://unpkg.com/vue"></script>
+	<script src="js/reporte.js"></script>
+</body>
+
+</html>
