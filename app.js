@@ -186,7 +186,7 @@ const smtpTransport = nodemailer.createTransport({
     }
 });
 
-app.get('/contact.html/send',function(req,res){
+app.get('/send',function(req,res){
   const mailOptions={
      to : req.query.to,
      subject : req.query.subject,
@@ -195,11 +195,11 @@ app.get('/contact.html/send',function(req,res){
   console.log(mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
   if(error){
-  console.log(error);
-  res.end("error");
+    console.log(error);
+    res.end("error");
   }else{
-  console.log("Message sent: " + response.mensaje);
-  res.end("sent");
+    console.log("Mensaje enviado" );
+    res.end("sent");
   }
   });
 });

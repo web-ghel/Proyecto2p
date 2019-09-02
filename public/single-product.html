@@ -15,6 +15,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
 	 crossorigin="anonymous">
 	</script>
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	 crossorigin="anonymous">
 	</script>
@@ -36,7 +37,7 @@
 <body>
 
 	<section id="title">
-    <h6>Producto</h6>
+    
 		<!-- Nav Bar -->
 		<div class="container-fluid">
 			<nav class="navbar navbar-expand-lg navbar-dark">
@@ -79,7 +80,7 @@
         <div class="card mb-3">
           <img data-intro="La imagen del producto/servicio" src="images/mueble.png" class="card-img-top" alt="instance">
           <div data-intro="Se encuentra las caracterisitcas del producto/servicio" class="card-body">
-            <h1 class="card-title">Sofá</h1>
+            <h1 class="card-title" id="art">Sofá</h1>
             <h2 class="card-subtitle">Características</h2>
             <ol>
               <li class="character-product">Tamaño</li>
@@ -96,14 +97,15 @@
           <img src="images/seller-01.png" class="card-img-top" alt="seller">
         <div class="card-body">
           <h3 class="card-title">Juan Pérez</h3>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Vel facilisis volutpat est velit. Non pulvinar neque laoreet suspendisse interdum consectetur. Tortor posuere ac ut consequat semper viverra nam libero justo.</p>
+          <p class="card-text">Andaluz afincado en Madrid. Apasionado del marketing ,el social media,el diseño gráfico y el derecho.Combinación letal! Co-creador del blog Marketing Onlaw.</p>
         </div>
             <div data-intro="Puede enviar mensajes al emprendedor para saber más características acerca de su producto." class="form-label-group">
               <textarea name="message" id="message" class="form-control" rows="9" cols="25" required autofocus placeholder="Mensaje"></textarea>
               <label id="name"></label>
               <div class="form-group">
                 <button data-intro="Al hacer clic el mensaje se envia al emprendedor hasta que lo lea." type="submit" class="btn btn-lg btn-primary btn-block btn-info text-uppercase font-weight-bold mb-2" id="btnContactUs">Enviar</button>
-              </div>
+								<span id="mensaje"></span>
+							</div>
             </div>
         </div>
       </div>
@@ -164,6 +166,7 @@
 
   <script src="js/intro.js"></script>
   <script src="js/intropagenext.js"></script>
+	<script src="js/email.js"></script>
 </body>
 
 </html>
