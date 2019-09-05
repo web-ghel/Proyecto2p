@@ -1,9 +1,23 @@
 var data = [10, 20, 100,50,62];
-
+var dat=[];
 var graf = d3.select("#pie-chart-1");
   var titulo = graf.append("h2")
   titulo.html("Grafico de vendedores");
   
+  d3.csv("/bases/data.csv",conversor, function(data){
+    console.log(data)
+    dat=data.map(function(d) { return d.fecha });
+    console.log(dat)
+    gratic(dat)
+});
+
+function conversor(d){
+    pres = d.fecha.substring(0,4);
+    d.fecha = parseFloat(pres);
+    return d;
+}
+
+function gratic(data){
   var width = 748,
       height = 530,
       radius = Math.min(width, height) / 2;
@@ -43,4 +57,4 @@ var graf = d3.select("#pie-chart-1");
         .attr("dy", ".35em")
         .text(function(d) { return d.data; });
 
-  
+  }
