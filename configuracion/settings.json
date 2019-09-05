@@ -1,0 +1,566 @@
+{
+    "mensaje_usuario": {
+        "slug": "mensaje_usuario",
+        "table": {
+            "name": "mensaje_usuario",
+            "pk": "idMensaje",
+            "verbose": "mensaje_usuario"
+        },
+        "columns": [
+            {
+                "name": "idMensaje",
+                "verbose": "idMensaje",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "contenido",
+                "verbose": "contenido",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(25)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "vendedor",
+                "verbose": "vendedor",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "cliente",
+                "verbose": "cliente",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "mensajeproductos": {
+        "slug": "mensajeproductos",
+        "table": {
+            "name": "mensajeproductos",
+            "pk": "idMU",
+            "verbose": "mensajeproductos"
+        },
+        "columns": [
+            {
+                "name": "idMU",
+                "verbose": "idMU",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "contenido",
+                "verbose": "contenido",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(25)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "producto",
+                "verbose": "producto",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "cliente",
+                "verbose": "cliente",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "productos": {
+        "slug": "productos",
+        "table": {
+            "name": "productos",
+            "pk": "idProduc",
+            "verbose": "productos"
+        },
+        "columns": [
+            {
+                "name": "idProduc",
+                "verbose": "idProduc",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "nombre",
+                "verbose": "nombre",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(15)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "precio",
+                "verbose": "precio",
+                "control": {
+                    "text": true
+                },
+                "type": "decimal(5,2)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "color",
+                "verbose": "color",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(10)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "tamano",
+                "verbose": "tamano",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(10)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "beneficio",
+                "verbose": "beneficio",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(20)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "vendedor",
+                "verbose": "vendedor",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "tienda": {
+        "slug": "tienda",
+        "table": {
+            "name": "tienda",
+            "pk": "idLocal",
+            "verbose": "tienda"
+        },
+        "columns": [
+            {
+                "name": "idLocal",
+                "verbose": "idLocal",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "nombre",
+                "verbose": "nombre",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(15)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "telefono",
+                "verbose": "telefono",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(10)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "direccion",
+                "verbose": "direccion",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(20)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "vendedor",
+                "verbose": "vendedor",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "usuarios": {
+        "slug": "usuarios",
+        "table": {
+            "name": "usuarios",
+            "pk": "idUser",
+            "verbose": "usuarios"
+        },
+        "columns": [
+            {
+                "name": "idUser",
+                "verbose": "idUser",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "nombre",
+                "verbose": "nombre",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(10)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "apellido",
+                "verbose": "apellido",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(10)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "mail",
+                "verbose": "mail",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(25)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "telefono",
+                "verbose": "telefono",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(10)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "direccion",
+                "verbose": "direccion",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(20)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "esVendedor",
+                "verbose": "esVendedor",
+                "control": {
+                    "text": true
+                },
+                "type": "tinyint(1)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "esCliente",
+                "verbose": "esCliente",
+                "control": {
+                    "text": true
+                },
+                "type": "tinyint(1)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "esAdministrador",
+                "verbose": "esAdministrador",
+                "control": {
+                    "text": true
+                },
+                "type": "tinyint(1)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    }
+}

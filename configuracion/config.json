@@ -1,0 +1,15 @@
+{
+    "mysql": {
+        "database": "proyectodaw",
+        "user": "adproyecto",
+        "password": "adproyecto"
+    },
+    "server": {
+        "port": 3001
+    },
+    "app": {
+        "layouts": true,
+        "themes": true,
+        "languages": true
+    }
+}
