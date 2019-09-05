@@ -278,6 +278,16 @@ app.get('/send',function(req,res){
   });
 });
 
+app.get("/bases/data.csv", function(req,res){
+    
+
+    if(req.isAuthenticated()){
+        res.sendFile(__dirname+"/bases/data.csv")
+    }else{
+        res.sendFile(__dirname+"/bases/data.csv")
+    }
+})
+
 app.listen(3000, function(){
     console.log("server listening")
 })
