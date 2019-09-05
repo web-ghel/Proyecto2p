@@ -150,6 +150,12 @@ app.get('/loginperfil' , function(req,res){
     })
 })
 
+app.get('/all/usuarios' , function(req,res){
+    Usuario.findAll().then(tiendas => {
+        res.send( JSON.stringify(tiendas, null, 4))
+    })
+})
+
 // Productos
 app.get('/all/products' , function(req,res){
     Producto.findAll().then(products => {
@@ -170,6 +176,16 @@ app.post('/user/crud', function(req, res){
             }
         })  
     })
+})
+app.post('/user/crud/admin', function(req, res){
+        var dic ={}
+        dic = req.body
+        dic["vendedor"] = 101
+        Producto.create(dic).then(function(prod){
+            if(prod){
+                console.log("Producto ingresado")
+            }
+        })  
 })
 
 app.delete('/user/crud/:id', function(req, res){
@@ -214,6 +230,20 @@ app.post('/tienda/crud', function(req, res){
     })
 })
 
+app.post('/admin/crud', function(req, res){
+
+        var dic ={}
+        dic = req.body
+        dic["idUser"] = 202
+            
+        Usuario.create(dic).then(function(prod){
+            if(prod){
+                console.log("usuario ingresado")
+            }
+        })
+    
+})
+
 app.get('/tienda/crud', function(req,res){
     Usuario.findOne({
         where:{mail:req.user.username}
@@ -233,9 +263,9 @@ app.put('/tienda/crud/:id', function(req,res){
 })
 
 app.delete('/tienda/crud/:id', function(req, res){
-    Tienda.findByPk(req.params.id).then((tienda) =>{
-        if(tienda){
-            return tienda.destroy()
+    Usuario.findByPk(req.params.id).then((usuario) =>{
+        if(usuario){
+            return usuario.destroy()
         }else{
             res.send("no se destruyo")
         }
