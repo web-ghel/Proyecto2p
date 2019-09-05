@@ -194,11 +194,36 @@ app.post('/tienda/crud', function(req, res){
                 console.log("Producto ingresado")
             }
         })
-        
     })
-    
+})
 
-    
+app.get('/tienda/crud', function(req,res){
+    Usuario.findOne({
+        where:{mail:req.user.username}
+    }).then(user =>{
+        Tienda.findAll({where :{vendedor : user.idUser}}).then(tiendas => {
+            console.log(JSON.stringify(tiendas, null, 4))
+            res.send( JSON.stringify(tiendas, null, 4))
+            
+        })
+    })
+})
+
+app.put('/tienda/crud/:id', function(req,res){
+    Tienda.update(req.body, {where: {idLocal: req.params.id}}).then((result) =>{
+        console.log(result)
+    })
+})
+
+app.delete('/tienda/crud/:id', function(req, res){
+    Tienda.findByPk(req.params.id).then((tienda) =>{
+        if(tienda){
+            return tienda.destroy()
+        }else{
+            res.send("no se destruyo")
+        }
+    })
+
 })
 
 //Email
