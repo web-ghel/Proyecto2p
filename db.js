@@ -4,7 +4,7 @@
 const Sequelize = require('sequelize');
 const Model = Sequelize.Model;
 
-const sequelize = new Sequelize('proyectodaw','root','root',{
+const sequelize = new Sequelize('proyectodaw','root','',{
 	host: 'localhost',
     dialect: 'mysql',
     define: {

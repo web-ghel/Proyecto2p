@@ -69,21 +69,20 @@ app.get('/api/usuario', function(req, res){
     })
 })
 app.get('/api/producto', function(req, res){
-    console.log(req.user.username)
+    
     Usuario.findOne({
         where:{mail:req.user.username}
     }).then(user =>{
         Producto.findAll({where :{vendedor : user.idUser}}).then(products => {
             res.send( JSON.stringify(products, null, 4))
         })
-
     })
 
 
 })
 
 app.get("/perfil", function(req,res){
-    console.log(req.user)
+    
 
     if(req.isAuthenticated()){
         res.sendFile(__dirname+"/public/vendedor.html")
@@ -122,7 +121,7 @@ app.post('/login', function(req, res){
         if(err){
             console.log(err)
         }else{
-            console.log(user)
+            
             passport.authenticate("local")(req,res,function(){
                 res.redirect("/perfil")
                 console.log("autenticado")
@@ -140,14 +139,20 @@ app.get('/loginperfil' , function(req,res){
     })
 })
 
-
+// Productos
 app.post('/user/crud', function(req, res){
-    Producto.create(req.body).then(function(prod){
-        if(prod){
-            console.log("Producto ingresado")
-        }
+    Usuario.findOne({
+        where:{mail:req.user.username}
+    }).then(user =>{
+        var dic ={}
+        dic = req.body
+        dic["vendedor"] = user.idUser
+        Producto.create(dic).then(function(prod){
+            if(prod){
+                console.log("Producto ingresado")
+            }
+        })  
     })
-    console.log(req.body)
 })
 
 app.delete('/user/crud/:id', function(req, res){
@@ -172,6 +177,28 @@ app.get('/api/producto/all', function(req,res){
     ProdMongo.find().then(products => {
         res.send( JSON.stringify(products, null, 4))
     })
+})
+
+//tienda
+app.post('/tienda/crud', function(req, res){
+
+    Usuario.findOne({
+        where:{mail:req.user.username}
+    }).then(user =>{
+        var dic ={}
+        dic = req.body
+        dic["vendedor"] = user.idUser
+            
+        Tienda.create(dic).then(function(prod){
+            if(prod){
+                console.log("Producto ingresado")
+            }
+        })
+        
+    })
+    
+
+    
 })
 
 //Email
