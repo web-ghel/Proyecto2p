@@ -20,7 +20,7 @@ const app = new Vue({
         loadJson (){   
             var app = this
             tmp = []
-            axios.get('http://localhost:3000/api/producto')
+            axios.get('http://localhost:3000/all/products')
             .then(function(response){
                 console.log(response.data[0].nombre)
                 var arr = response.data

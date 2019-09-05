@@ -140,6 +140,12 @@ app.get('/loginperfil' , function(req,res){
 })
 
 // Productos
+app.get('/all/products' , function(req,res){
+    Producto.findAll().then(products => {
+        res.send( JSON.stringify(products, null, 4))
+    })
+})
+
 app.post('/user/crud', function(req, res){
     Usuario.findOne({
         where:{mail:req.user.username}
@@ -244,6 +250,11 @@ app.get('/send',function(req,res){
      subject : req.query.subject,
      text : req.query.text
   }
+  Mensaje_Usuario.create({contenido:req.query.text}).then(function(mensaje){
+    if(mensaje){
+    console.log("Producto ingresado")
+    }
+})
   console.log(mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
   if(error){
