@@ -82,8 +82,9 @@ const app = new Vue({
             console.log("actualizando prod " + this.id2,)
         },
         editarTienda(){
+            console.log(this.id2)
             var postStr = 'nombre='+app.editTienda.nombre+"&direccion="+app.editTienda.direccion+"&telefono="+app.editTienda.telefono
-            axios.put('http://localhost:3000/tienda/crud/' + this.id2, postStr,{
+            axios.put('http://localhost:3000/usuario/crud/' + "102", postStr,{
                 headers:{
                     'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
                 }

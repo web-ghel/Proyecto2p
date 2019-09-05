@@ -261,6 +261,11 @@ app.put('/tienda/crud/:id', function(req,res){
         console.log(result)
     })
 })
+app.put('/usuario/crud/:id', function(req,res){
+    Usuario.update(req.body, {where: {idUser: req.params.id}}).then((result) =>{
+        console.log(result)
+    })
+})
 
 app.delete('/tienda/crud/:id', function(req, res){
     Usuario.findByPk(req.params.id).then((usuario) =>{
@@ -270,9 +275,16 @@ app.delete('/tienda/crud/:id', function(req, res){
             res.send("no se destruyo")
         }
     })
-
 })
-
+app.delete('/usuario/crud/:id', function(req, res){
+    Usuario.findByPk(req.params.id).then((usuario) =>{
+        if(usuario){
+            return usuario.destroy()
+        }else{
+            res.send("no se destruyo")
+        }
+    })
+})
 //Email
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 const smtpTransport = nodemailer.createTransport({
