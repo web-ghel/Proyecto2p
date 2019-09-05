@@ -99,11 +99,22 @@ app.get('/logout', function(req,res){
 
 
 app.post('/register' , function(req,res){
+    console.log(req.body.username + " " + req.body.password)
     User.register({username: req.body.username}, req.body.password, function(err, user){
         if(err){
             console.log(err)
             res.redirect(__dirname+"/public/login.html")
         }else{
+            var id 
+            id = Math.floor(Math.random() * 1000)
+            Usuario.create({idUser: id, nombre:req.body.nombre, apellido:req.body.apellido, mail: req.body.username, telefono:req.body.telefono, direccion:req.body.direccion, esVendedor:req.body.esVendedor}).then(function(user){
+                if(user){
+                    console.log("registrado")
+                }else{
+                    console.log("error")
+                }
+            })
+
             passport.authenticate("local")(req ,res, function(){
                 res.redirect("/")
             })

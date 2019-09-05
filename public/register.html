@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Formulario de Registro</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -72,7 +73,7 @@
           </div>
           <div class="col-md-8 py-5 border">
             <h4 class="pb-4">Llenar con los datos requeridos</h4>
-
+            <div id="app">
             <form id="regForm" action="">
 
               <div class="col-lg-12">
@@ -84,15 +85,15 @@
               <div class="tab">
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <input id="Name" name="Name" placeholder="Nombre" class="form-control" type="text">
+                    <input id="Name" v-model="form.nombre" name="Name" placeholder="Nombre" class="form-control" type="text">
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="apellido" name="apellido" placeholder="Apellido" class="form-control" type="text">
+                    <input id="apellido" v-model="form.apellido" name="apellido" placeholder="Apellido" class="form-control" type="text">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    <input type="email" v-model="form.username" class="form-control" id="inputEmail4" placeholder="Email">
                   </div>
                   <div class="form-group col-md-6">
                     <select id="inputState" class="form-control">
@@ -104,7 +105,7 @@
 
                   <div class="form-group col-md-12">
                     <label>Crea una contraseña</label>
-                    <input class="form-control" type="password">
+                    <input class="form-control" v-model="form.password" type="password">
                     <label>Confirma tu contraseña</label>
                    <input class="form-control" type="password">
                   </div>
@@ -123,7 +124,7 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label>Número convencional</label>
-                    <input type="phone" class="form-control" id="phone" placeholder="(+593) 99 888 7777">
+                    <input type="phone" v-model="form.telefono" class="form-control" id="phone" placeholder="(+593) 99 888 7777">
                   </div>
                   <div class="form-group col-md-6">
                     <label>Número celular</label>
@@ -132,7 +133,7 @@
 
                   <div class="form-group col-md-12">
                     <label>Dirección</label>
-                    <input type="direccion" class="form-control" id="direccion" placeholder="Primavera 2 Mz 39A">
+                    <input type="direccion" v-model="form.direccion" class="form-control" id="direccion" placeholder="Primavera 2 Mz 39A">
                   </div>
 
                 </div>
@@ -176,10 +177,12 @@
               <div class="form-row">
                 <button type="button" id="prevBtn" class="btn btn-lg btn-primary btn-info text-uppercase font-weight-bold mb-2 ml-2" onclick="nextPrev(-1)">Anterior</button>
                 <button type="button" id="nextBtn" class="btn btn-lg btn-primary btn-info text-uppercase font-weight-bold mb-2 ml-2" onclick="nextPrev(1)">Siguiente</button>
+                <button type="button" @click="registrar()"> Registrar</button>
               </div>
 
               <script src="js/stepper.js"></script>
             </form>
+          </div>
 
           </div>
         </div>
@@ -198,6 +201,9 @@
     <p class="footerText">© Copyright 2019 proyectoDAW</p>
 
   </footer>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="js/register.js"></script>
 
 
 
